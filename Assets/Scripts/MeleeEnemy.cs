@@ -8,7 +8,7 @@ public class MeleeEnemy : Enemy
     {
         if (TargetTransform)
         {
-           // MoveTo(TargetTransform.position);
+            MoveTo(TargetTransform.position);
         }
     }
 }

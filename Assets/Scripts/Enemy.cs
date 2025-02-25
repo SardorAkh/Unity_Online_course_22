@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IDamagable
 {
     [SerializeField] protected int healthPoint;
     [SerializeField] protected int damage;
@@ -29,12 +29,24 @@ public class Enemy : MonoBehaviour
     protected virtual void Attack() {}
     protected virtual void ReceiveDamage() {}
     
-    private void MoveTo(Vector3 targetPosition)
+    protected void MoveTo(Vector3 targetPosition)
     {
         // Vector3 direction = targetPosition - transform.position;
         // rb.position += direction * movementSpeed * Time.deltaTime;
         
         rb.position = Vector3.MoveTowards(rb.position, targetPosition,
             movementSpeed * Time.deltaTime);
+    }
+
+    public void Damage(int amount)
+    {
+        healthPoint -= amount;
+        
+        Debug.Log(name);
+        
+        // if (healthPoint <= 0)
+        // {
+        //     Destroy(gameObject);
+        // }
     }
 }

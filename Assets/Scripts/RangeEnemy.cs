@@ -8,6 +8,7 @@ public class RangeEnemy : Enemy
     {
         if (TargetTransform)
         {
+            MoveTo(TargetTransform.position);
             //MoveTo();
             //Strafe();
         }
