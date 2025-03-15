@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/2-homework.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Menu.unity
+    guid: e8672ff8a209cd141b08c3d991c5a5ce
+  - enabled: 1
+    path: Assets/Scenes/TowerDefense.unity
+    guid: ca14547b7142c094d99bd8d643a0513f
   m_configObjects: {}
